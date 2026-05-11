@@ -1,0 +1,8 @@
+{
+  "name": "task-manager-front",
+  "version": "1.0.0",
+  "description": "Frontend do Task Manager",
+  "scripts": {
+    "start": "npx serve ."
+  }
+}
