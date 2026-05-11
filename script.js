@@ -1,5 +1,5 @@
 // Troque pela URL do Render após o deploy
-const API_URL = 'http://localhost:3000';
+const API_URL = 'https://task-manager-api-d3s3.onrender.com';
 
 async function loadTasks() {
   const response = await fetch(`${API_URL}/tasks`);
