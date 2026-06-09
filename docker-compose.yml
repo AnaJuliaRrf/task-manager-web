@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  frontend:
+    build: .
+    container_name: frontend-projeto
+    ports:
+      - "8080:80"
