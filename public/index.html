@@ -6,10 +6,10 @@
   <title>Task Manager</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2=family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   
   <style>
-    /* --- VARIÁVEIS DE DESIGN --- */
+    /* --- VARIÁVEIS DE DESIGN (Originais do estudante) --- */
     :root {
       --bg-body: #f4f5f7;
       --bg-card: #ffffff;
@@ -60,7 +60,7 @@
       gap: 10px;
     }
 
-    /* --- ÁREA DE INPUT (Agrupado) --- */
+    /* --- ÁREA DE INPUT --- */
     .input-group {
       display: flex;
       gap: 8px;
@@ -129,11 +129,38 @@
       background: #fafafa;
     }
 
-    /* Estado Concluído */
     .completed {
       text-decoration: line-through;
       color: var(--text-muted);
       opacity: 0.7;
+    }
+
+    /* --- NOVA SEÇÃO EXIGIDA: TESTE DO DOCKER /v1 --- */
+    .docker-test-container {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 2px dashed var(--border);
+      text-align: center;
+    }
+
+    .btn-docker {
+      background-color: #0284c7; /* Azul Docker */
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .btn-docker:hover {
+      background-color: #0369a1;
+    }
+
+    #resposta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      background: var(--bg-body);
+      padding: 10px;
+      border-radius: 8px;
+      min-height: 40px;
+      word-break: break-all;
     }
 
     /* --- RODAPÉ / VERSÃO --- */
@@ -158,10 +185,14 @@
       <button onclick="addTask()">Adicionar</button>
     </div>
 
-    <ul id="taskList">
-      </ul>
+    <ul id="taskList"></ul>
 
-    <p class="version">v1.0.1 • CI/CD via Vercel + Render</p>
+    <div class="docker-test-container">
+      <button class="btn-docker" onclick="chamarAPI()">🧪 Testar API (v1)</button>
+      <p id="resposta">Aguardando teste de conexão...</p>
+    </div>
+
+    <p class="version">v1.1.0 • CI/CD via Vercel + Render (Docker & Nginx)</p>
   </div>
 
   <script src="script.js"></script>
